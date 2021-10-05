@@ -36,8 +36,8 @@ const main = async () => {
     })
   );
 
-  app.listen(3001, () => {
-    console.log("Server runnig on port 3001");
+  app.listen(process.env.PORT, () => {
+    console.log(`Server runnig on port`, process.env.PORT);
   });
 };
 
