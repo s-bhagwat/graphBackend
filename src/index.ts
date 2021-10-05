@@ -8,14 +8,14 @@ import { Users } from "./Entities/Users";
 import { Shops } from "./Entities/Shops";
 import { Invoices } from "./Entities/Invoice";
 import { Items } from "./Entities/Items";
-const { HOST, USERNAME, PASSWORD, DATABASE } = process.env;
+const { HOST, DB_USERNAME, PASSWORD, DATABASE } = process.env;
 
 const main = async () => {
   await createConnection({
     type: "mysql",
     host: HOST,
     database: DATABASE,
-    username: USERNAME,
+    username: DB_USERNAME,
     password: PASSWORD,
     port: 3306,
     logging: true,

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./dist/index.js",
     "dev": "nodemon ./src/index.ts",
-    "build": "yarn tsc -p ."
+    "build": "yarn tsc -p .",
+    "heroku-postbuild": "yarn build"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
