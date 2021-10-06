@@ -14,6 +14,6 @@ export const GET_ALL_INVOICES = {
 export const GET_ALL_ITEMS = {
   type: new GraphQLList(ItemType),
   resolve() {
-    return Items.find();
+    return Items.find({ relations: ["invoices"] });
   },
 };
